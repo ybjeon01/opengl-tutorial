@@ -1,0 +1,7 @@
+08:40:24 **** Clean-only build of configuration Debug for project hello, window! ****
+make clean 
+rm -rf  ./src/glad.o ./src/hello,\ window!.o  ./src/hello,\ window!.d  ./src/glad.d  "hello, window!"
+ 
+
+08:40:24 Build Finished (took 400ms)
+

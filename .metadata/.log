@@ -1,0 +1,83 @@
+!SESSION 2018-06-22 05:43:27.347 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/ybjeon01/Documents/opengl tutorial/eclipse-workspace -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2018-06-22 05:43:33.850
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. ; version: 2.0.7.v20170906-1327
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1974)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1926)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1909)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1947)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1777)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:264)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1098)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1026)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 21 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 36 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-22 05:44:32.786
+!MESSAGE Indexed 'hello, window!' (1 sources, 174 headers) in 6.52 sec: 13,482 declarations; 21,235 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-22 05:46:28.590
+!MESSAGE Indexed 'hello, window!' (1 sources, 174 headers) in 3.49 sec: 13,482 declarations; 21,235 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-22 06:03:37.634
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-22 06:03:37.634
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-22 06:03:37.635
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-22 07:24:56.892
+!MESSAGE Indexed 'hello, window!' (2 sources, 250 headers) in 3.91 sec: 19,637 declarations; 31,310 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-22 08:40:12.754
+!MESSAGE Indexed 'hello, window!' (2 sources, 250 headers) in 3.41 sec: 19,637 declarations; 31,310 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
